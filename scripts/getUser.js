@@ -67,7 +67,7 @@ btnEditar.addEventListener('click', async () => {
         "content-type": "application/json; charset=UTF-8"
     }
 })
-    let data = resp.json()
+    let data = await resp.json()
     console.log(data)
 })
 
@@ -76,6 +76,6 @@ btnEliminar.addEventListener('click', async () => {
     let res = await fetch(`http://localhost:4002/usuarios/${idModificar}`, {
         method: 'DELETE',
     })
-    let data = res.json()
+    let data = await res.json()
     console.log(data)
 })
