@@ -39,8 +39,8 @@ btnCorreo.addEventListener('click', async () => {
     let res = await fetch('http://localhost:4002/usuarios')
     let data = await res.json()
     console.log(data)
-    let modificar = data.find(user => user.correo === email)
-    const {nombre, apellido, correo, id} = modificar
+    let search = data.find(user => user.correo.toLowerCase() === email.toLowerCase())
+    const {nombre, apellido, correo, id} = search
     console.log(nombre, apellido, correo, id)
 
     document.getElementById('name').value = nombre
@@ -55,7 +55,7 @@ btnEditar.addEventListener('click', async () => {
     let lastNameMod = document.getElementById('lastName').value
     let emailMod = document.getElementById('email').value
 
-    let res = await fetch(`http://localhost:4002/usuarios${idModificar}`, {
+    let res = await fetch(`http://localhost:4002/usuarios/${idModificar}`, {
     method: 'PUT',
     body: JSON.stringify({
         id: idModificar,

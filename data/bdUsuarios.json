@@ -11,6 +11,18 @@
       "apellido": "Doe",
       "correo": "jondoe@gmail.com",
       "id": 3
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "correo": "2",
+      "id": 4
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "correo": "JONDOE@GMAIL.COM",
+      "id": 5
     }
   ]
 }
